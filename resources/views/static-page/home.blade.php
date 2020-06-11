@@ -1,22 +1,30 @@
 @extends('layout.main')
 
 @section('main-content')
-    <div class="jumbotron">
+    <section class="jumbotron">
         
         <div class="jumbotron-text">
            
-            <h1>DIVENTA SVILUPPATORE WEB</h1>
+            <h1>
+                <span>DIVENTA</span>                
+                <span>SVILUPPATORE WEB</span>
+            </h1>
 
             <p>Trasformiamo la tua passione in una carriera. Se non trovi lavoro, ti rimborsiamo.</p>
 
+            
             <ul>
-                <li><strong>6 mesi</strong> di corso intensivo online in diretta</li>
-                <li><strong>Nessuna competenza</strong> di programmazione richiesta</li>
-                <li>Siamo certi del tuo successo, <strong>altrimenti ti rimborsiamo</strong> </li>
+                <li><span>6 mesi</span> di corso intensivo online in diretta</li>
+                <li><span>Nessuna competenza</span> di programmazione richiesta</li>
+                <li>Siamo certi del tuo successo, <span>altrimenti ti rimborsiamo</span> </li>
             </ul>
+            
         </div>
 
-        <img class="jumbotron-img" src="https://www.boolean.careers/images/homepage/pc-black-gif.gif" alt="Impara a programmare">
+        <div class="jumbotron-image">
+            <img src="https://www.boolean.careers/images/homepage/pc-black-gif.gif" alt="Impara a programmare">
+        </div>
+
         
-    </div>
+    </section>
 @endsection
