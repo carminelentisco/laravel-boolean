@@ -123,6 +123,9 @@ a {
 }
 
 .jumbotron .jumbotron-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   flex-basis: 60%;
 }
 
@@ -142,6 +145,19 @@ a {
 .jumbotron .jumbotron-text p {
   font-size: 25px;
   font-weight: bold;
+}
+
+.jumbotron .jumbotron-text ul {
+  padding-left: 15px;
+}
+
+.jumbotron .jumbotron-text ul li {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.jumbotron .jumbotron-text ul span {
+  font-weight: 400;
 }
 
 .jumbotron .jumbotron-image {
