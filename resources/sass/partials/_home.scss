@@ -1,14 +1,51 @@
 .jumbotron {
-    margin-top: 4rem;
-    display: flex;
     
+    margin-top: 6rem;
+    display: flex;
+
     .jumbotron-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-basis: 60%;
         h1 {
-            font-size: 50px;
+            font-size: 60px;
+            span:first-of-type {
+                font-weight: 300;
+            }
+            span:last-of-type {
+                display: block;
+                font-weight: bold;
+            }
+        }
+
+        p {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        ul {
+            padding-left: 15px;
+
+            li {
+                font-size: 18px;
+                line-height: 1.5;
+                
+                
+            }
+
+            span {
+                font-weight: 400;
+            }
         }
     }
 
-    .jumbotron-img {
-        width: 50%;
+    .jumbotron-image {
+        
+        flex-basis: 40%;
+        @include center-flex;
+        img {
+            height: 200px;
+        }
     }
 }
