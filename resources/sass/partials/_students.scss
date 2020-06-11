@@ -1,0 +1,16 @@
+.students {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .student {
+        padding: 1rem;
+        margin-bottom: 2rem;
+        flex-basis: 48%;
+        box-shadow: 0 8px 20px #000;
+        border-radius: 15px;
+    }
+    a {
+        text-decoration: none;
+        color:$black;
+    }
+}
