@@ -7,7 +7,9 @@
 }
 
 body {
-    font-family:sans-serif;
+    color: $blue;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -21,6 +23,10 @@ p {
     margin-bottom: 1rem;
 }
 
+a {
+    text-decoration: none;
+}
+
 .main-content {
     width: 1140px;
     max-width: 1140px;
@@ -29,6 +35,5 @@ p {
     flex-grow: 1;
 }
 
-.list-style {
-    list-style: none;
-}
+
+

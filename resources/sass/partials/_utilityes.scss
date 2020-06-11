@@ -1,0 +1,49 @@
+// ---------- UTILITY
+
+/**
+ * logo style
+**/
+@mixin logo_header {
+    .logo {
+        height: 60px;
+    }  
+}
+
+/**
+ * Rimozione degli stili della lista
+**/
+.list-style {
+    list-style: none;
+}
+
+/**
+ *  Pulizia + Lista inline-flex
+**/
+@mixin list-inline {
+    display: flex;
+    list-style: none;
+}
+
+/**
+ *  Bottoni
+**/
+
+.btn-small {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.bt-green {
+    color: $white;
+    background-color: $green;
+}
+
+/**
+ *  Center flex
+**/
+
+@mixin center-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
