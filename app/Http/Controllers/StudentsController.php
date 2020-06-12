@@ -8,21 +8,26 @@ class StudentsController extends Controller
 {
 
     private $students;
+    private $genders;
 
     public function __construct() {
 
-        $this->students = config('students');
+        $this->students = config('students.students');
+        $this->genders = config('students.genders');
     } 
 
     public function index() {
 
-        $students = $this->students; 
+       $data = [
+        'students' => $this->students,
+        'genders' => $this->genders
+       ];
 
-        return view('students.index', compact('students'));
+        return view('students.index', $data);
     }
 
-    public function show($id) {
-        $student = $this->checkStudent($id, $this->students);
+    public function show($slug) {
+        $student = $this->checkStudent($slug, $this->students);
 
         if ( !$student ) {
             abort('404');
@@ -32,9 +37,9 @@ class StudentsController extends Controller
         return view('students.show', compact('student'));
     }
 
-    private function checkStudent($id, $array) {
+    private function checkStudent($slug, $array) {
         foreach ($array as $student) {
-            if ($student['id'] == $id ) {
+            if ($student['slug'] == $slug ) {
                 return $student;
             } 
         }
