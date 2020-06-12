@@ -4,7 +4,7 @@
     color: $white;
     font-weight: 400;
 
-    .container {
+    .container-info {
         margin-top: 50px;
         padding-bottom: 20px;
         display: flex;
@@ -40,4 +40,23 @@
         color: $white;
         text-decoration: none;
     }
+
+    .social-list {
+        @include list-inline;
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+
+        li {  
+            margin: 0 20px;
+            i {
+            font-size: 35px;
+            }
+        }
+    }
+
+    p {
+        text-align: center;
+    }
+    
 }

@@ -1,6 +1,6 @@
 
     <footer class="footer">
-        <div class="container">
+        <div class="container-info container">
             
             <div class="footer-sx">
                 <h2>
@@ -23,6 +23,16 @@
                 </ul>
             </div>
             
+        </div>
+
+        <div class="container">
+            <ul class="social-list">
+                <li><i class="fab fa-instagram"></i></li>
+                <li><i class="fab fa-facebook-f"></i></li>
+                <li><i class="fab fa-linkedin-in"></i></li>
+                <li><i class="fab fa-youtube"></i></li>
+            </ul>
+            <p>Boolean SRL - Piazzale Giovanni dalle Bande Nere, 9 - 20146, Milano - P.IVA: 10214930967</p>
         </div>
     </footer>
 
