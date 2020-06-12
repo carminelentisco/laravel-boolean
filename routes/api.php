@@ -14,6 +14,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+/**
+ * Creazione di una rotta per Api
+ * 
+ * Assegno aggiungo il nome della catella tramite namespace('Api') ed gli assegno un gruppo ->group()
+ * 
+ * Al suo interno vi inserisco la rotta dell api in post
+ */
+
+Route::namespace('Api')->group(function () {
+    Route::post('students/genders', 'StudentController@gender');
 });
