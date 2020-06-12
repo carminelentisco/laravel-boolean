@@ -20,4 +20,4 @@ Route::get('/faq', 'StaticPageController@faq')->name('static-page.faq');
 
 // Pagine dinamiche
 Route::get('/students/index', 'StudentsController@index')->name('students-page.index');
-Route::get('/students/show/{id}', 'StudentsController@show')->name('students-page.show');
+Route::get('/students/show/{slug}', 'StudentsController@show')->name('students-page.show');
