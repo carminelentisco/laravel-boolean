@@ -1,4 +1,27 @@
-// ---------- UTILITY
+// ---------- UTILITY CONTROLLATE
+@mixin align-center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin center-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin logo_header {
+    .logo {
+        height: 60px;
+    }  
+}
+
+// ----------UTILITY DA CONTROLLARE
 .container {
     max-width: 1140px;
     margin: 0 auto; 
@@ -12,11 +35,7 @@
 /**
  * logo style
 **/
-@mixin logo_header {
-    .logo {
-        height: 60px;
-    }  
-}
+
 
 /**
  * Rimozione degli stili della lista
@@ -51,8 +70,3 @@
  *  Center flex
 **/
 
-@mixin center-flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
