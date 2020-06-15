@@ -9,13 +9,6 @@
     justify-content: $direction;   
 }
 
-// --- In attesa di eliminazione
-@mixin center-flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-//-------------------------------
 @mixin flex ($justify-direction, $align-direction) {
     display: flex;
     justify-content: $justify-direction;
