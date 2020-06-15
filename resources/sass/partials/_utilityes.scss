@@ -9,6 +9,11 @@
     justify-content: space-between;
 }
 
+@mixin justify ($direction) {
+    display: flex;
+    justify-content: $direction;   
+}
+
 @mixin center-flex {
     display: flex;
     justify-content: center;
@@ -40,6 +45,11 @@
 /**
  * Rimozione degli stili della lista
 **/
+
+@mixin list-column ($text-align) {
+    list-style: none;
+    text-align: $text-align;
+}
 .list-style {
     list-style: none;
 }
