@@ -11,38 +11,39 @@
 </head>
 <body>
 
-    <header class="header-content">
-        <nav class="nav-bar">
+    <header class="header-container">
+        {{-- Logo della pagina --}}
+        <a href="{{ Route('static-page.home') }}"><img class="logo" src="https://www.boolean.careers/images/common/logo.png" alt="Logo Boolean"></a>
+        
+        {{-- Menù della pagina --}}
+        <nav class="header_menu-container">
+
+            <ul class="header_menu-list">
+                <li>
+                    <a  
+                        @if (Request::route()->getName() == 'static-page.home') 
+                            class="active" 
+                        @endif 
+                        class="link" href="{{ Route('static-page.home') }}">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Corso</a>
+                </li>
+                <li>
+                    <a @if (Request::route()->getName() == 'students-page.index') class="active" @endif 
+                    href="{{ Route('students-page.index') }}">Dopo il corso</a>
+                </li>
+                <li>
+                    <a href="#">Lezione Gratuita</a>
+                </li>
+                <li>
+                    <a href="#">Assumi i nostri studenti</a>
+                </li>
+            </ul>
+
+            <a class="btn-small bt-green" href="#">Candidati ora</a>
             
-            <a href="{{ Route('static-page.home') }}"><img class="logo" src="https://www.boolean.careers/images/common/logo.png" alt="Logo Boolean"></a>
-
-            <div class="actions">
-                <ul class="nav-menu">
-                    <li>
-                        <a  
-                            @if (Request::route()->getName() == 'static-page.home') 
-                                class="active" 
-                            @endif 
-                            class="link" href="{{ Route('static-page.home') }}">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">Corso</a>
-                    </li>
-                    <li>
-                        <a @if (Request::route()->getName() == 'students-page.index') class="active" @endif 
-                        href="{{ Route('students-page.index') }}">Dopo il corso</a>
-                    </li>
-                    <li>
-                        <a href="#">Lezione Gratuita</a>
-                    </li>
-                    <li>
-                        <a href="#">Assumi i nostri studenti</a>
-                    </li>
-                </ul>
-
-                <a class="btn-small bt-green" href="#">Candidati ora</a>
-            </div>
         </nav>
     </header>
