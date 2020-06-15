@@ -1,18 +1,14 @@
 .jumbotron {
-    
     margin: 6rem 0;
     display: flex;
 
     .jumbotron-text {
-        display: flex;
+        @include justify(flex-start);
         flex-direction: column;
-        justify-content: flex-start;
         flex-basis: 60%;
         h1 {
             font-size: 60px;
-            span:first-of-type {
-                font-weight: 300;
-            }
+            span:first-of-type { font-weight: 300; }
             span:last-of-type {
                 display: block;
                 font-weight: bold;
@@ -29,9 +25,7 @@
 
             li {
                 font-size: 18px;
-                line-height: 1.5;
-                
-                
+                line-height: 1.5;   
             }
 
             span {
@@ -43,7 +37,7 @@
     .jumbotron-image {
         
         flex-basis: 40%;
-        @include center-flex;
+        @include flex (center, center);
         img {
             height: 200px;
         }
