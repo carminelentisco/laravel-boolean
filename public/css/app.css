@@ -81,49 +81,51 @@ a {
  *  Center flex
 **/
 
-.header-content {
-  padding: 10px 10px 0;
+.header-container {
+  padding: 10px 10px 0 10px;
   background: #ffffff;
+  display: flex;
+  justify-content: space-between;
 }
 
-.header-content .logo {
+.header-container .logo {
   height: 60px;
 }
 
-.header-content .actions {
+.header-container .actions {
   display: flex;
   align-items: center;
 }
 
-.header-content .actions a {
+.header-container .actions a {
   text-transform: uppercase;
 }
 
-.nav-bar {
+.header_menu-container {
   display: flex;
   justify-content: space-between;
+  display: flex;
   align-items: center;
 }
 
-.nav-bar .nav-menu {
+.header_menu-container .header_menu-list {
   display: flex;
   list-style: none;
 }
 
-.nav-bar .nav-menu li {
+.header_menu-container .header_menu-list li {
   margin-right: 40px;
 }
 
-.nav-bar .nav-menu li a {
+.header_menu-container .header_menu-list li a {
   color: #1B3C59;
   padding: 16px 16px 21px 16px;
   font-size: 14px;
-  text-decoration: none;
   text-transform: uppercase;
 }
 
-.nav-bar .nav-menu li a:hover,
-.nav-bar .nav-menu li a.active {
+.header_menu-container .header_menu-list li a:hover,
+.header_menu-container .header_menu-list li a.active {
   border-bottom: 2px solid #73d462;
 }
 
