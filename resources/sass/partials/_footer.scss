@@ -1,62 +1,43 @@
-.footer{
-    padding: 1rem 0 4rem 0; 
-    background: $blue;
+.footer_section {
+    padding: 5rem 0 4rem 0; 
     color: $white;
+    background: $blue;
     font-weight: 400;
 
-    .container-info {
-        margin-top: 50px;
+    .footer_info {
         padding-bottom: 20px;
-        display: flex;
-        justify-content: space-between;
         border-bottom: 1px solid $white;
+        @include justify(space-between);
     }
 
-    .footer-sx {
-       
-       
-        img {
-            height: 60px;
-        }  
-
-        h2 {
-           margin-bottom: 10px;
-        }
+    .footer_info-brand {  
+        img { height: 60px; }  
+        h2 { margin-bottom: 10px; }
+        ul { @include list-column (start) }
     }
     
-    .footer-dx {
+    .footer_menu-list {
         .footer-action {
-            text-align: right;
             font-size: 20px;
-
-            li {
-                margin-bottom: 8px;
-            }
+            @include list-column (end);
+            li { margin-bottom: 8px; }
         }
     }
     
+    a { color: $white; }
 
-    a {
-        color: $white;
-        text-decoration: none;
-    }
-
-    .social-list {
-        @include list-inline;
-        display: flex;
-        justify-content: center;
-        margin: 20px 0;
-
-        li {  
-            margin: 0 20px;
-            i {
-            font-size: 35px;
+    .footer_social {
+        ul {
+            margin: 20px 0;
+            @include list-inline;
+            @include justify (center); 
+            
+            li {  
+                margin: 0 20px;
+                i { font-size: 35px; }
             }
         }
+        
+        p { text-align: center; }  
     }
-
-    p {
-        text-align: center;
-    }
-    
 }
