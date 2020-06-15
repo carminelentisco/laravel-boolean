@@ -2,23 +2,21 @@
     padding: 10px 10px 0 10px;
     background: $white;
     @include logo_header;
-    @include space-between;
+    @include justify(space-between);
 
     .actions {
-        @include align-center;
+        @include align(center);
         a { text-transform: uppercase; }
     }
 }
 
 .header_menu-container {
-    @include space-between;
-    @include align-center;
+    @include flex (center, center);
 
     .header_menu-list {
         @include list-inline;
 
-        li {
-            
+        li {          
             margin-right: 40px;
             a {
                 color: $blue;
@@ -32,8 +30,6 @@
                 }
             }
         }
-    }
-
-    
+    }   
 }
 

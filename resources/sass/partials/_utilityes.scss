@@ -1,12 +1,7 @@
 // ---------- UTILITY CONTROLLATE
-@mixin align-center {
+@mixin align ($direction) {
     display: flex;
-    align-items: center;
-}
-
-@mixin space-between {
-    display: flex;
-    justify-content: space-between;
+    align-items: $direction;
 }
 
 @mixin justify ($direction) {
@@ -14,10 +9,17 @@
     justify-content: $direction;   
 }
 
+// --- In attesa di eliminazione
 @mixin center-flex {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+//-------------------------------
+@mixin flex ($justify-direction, $align-direction) {
+    display: flex;
+    justify-content: $justify-direction;
+    align-items: $align-direction;
 }
 
 @mixin logo_header {
