@@ -135,8 +135,8 @@ a {
 
 .jumbotron .jumbotron-text {
   display: flex;
-  flex-direction: column;
   justify-content: flex-start;
+  flex-direction: column;
   flex-basis: 60%;
 }
 
