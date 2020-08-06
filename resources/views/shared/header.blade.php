@@ -16,24 +16,22 @@
         <a href="{{ Route('static-page.home') }}"><img class="logo" src="https://www.boolean.careers/images/common/logo.png" alt="Logo Boolean"></a>
         
         {{-- Menù della pagina --}}
-        <nav class="header_menu-container">
-
+        <nav class="header_nav-container">
             <ul class="header_menu-list">
-                <li>
-                    <a  
-                        @if (Request::route()->getName() == 'static-page.home') 
-                            class="active" 
-                        @endif 
-                        class="link" href="{{ Route('static-page.home') }}">
-                        Home
-                    </a>
+                <li
+                @if (Request::route()->getName() == 'static-page.home') 
+                    class="active" 
+                @endif 
+                >
+                    <a class="link" href="{{ Route('static-page.home') }}">Home</a>
                 </li>
                 <li>
                     <a href="#">Corso</a>
                 </li>
-                <li>
-                    <a @if (Request::route()->getName() == 'students-page.index') class="active" @endif 
-                    href="{{ Route('students-page.index') }}">Dopo il corso</a>
+                <li 
+                @if (Request::route()->getName() == 'students-page.index') class="active" @endif 
+                >
+                    <a href="{{ Route('students-page.index') }}">Dopo il corso</a>
                 </li>
                 <li>
                     <a href="#">Lezione Gratuita</a>
@@ -43,7 +41,7 @@
                 </li>
             </ul>
 
-            <a class="btn-small bt-green" href="#">Candidati ora</a>
+            <a class="btn-small bt-green btn-link" href="#">Candidati ora</a>
             
         </nav>
     </header>

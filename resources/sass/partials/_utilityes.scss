@@ -9,69 +9,49 @@
     justify-content: $direction;   
 }
 
-@mixin flex ($justify-direction, $align-direction) {
+@mixin flex ($justify-direction:flex-start, $align-direction:flex-start) {
     display: flex;
     justify-content: $justify-direction;
     align-items: $align-direction;
 }
 
-@mixin logo_header {
-    .logo {
-        height: 60px;
-    }  
-}
-
-// ----------UTILITY DA CONTROLLARE
-.container {
-    max-width: 1140px;
-    margin: 0 auto; 
-}
-
-.title-center {
-    text-align: center;
-}
-
-
-/**
- * logo style
-**/
-
-
-/**
- * Rimozione degli stili della lista
-**/
-
-@mixin list-column ($text-align) {
-    list-style: none;
-    text-align: $text-align;
-}
-.list-style {
-    list-style: none;
-}
-
-/**
- *  Pulizia + Lista inline-flex
-**/
 @mixin list-inline {
     display: flex;
     list-style: none;
 }
 
-/**
- *  Bottoni
-**/
+@mixin list-column ($text-align) {
+    list-style: none;
+    text-align: $text-align;
+}
 
+@mixin link-formatter($color) {
+    text-decoration: none;
+    color: $color
+}
+
+.logo { height: 60px; } 
+.active { border-bottom: 2px solid $border_bottom; }
+.btn-link { text-decoration: none }
+.container {
+    max-width: 1140px;
+    margin: 0 auto; 
+}
+.bt-green {
+    color: #fff;
+    background-color: $bool_green;
+}
 .btn-small {
     padding: 10px;
     border-radius: 5px;
 }
-
-.bt-green {
-    color: $white;
-    background-color: $green;
+.title-center {
+    text-align: center;
 }
 
-/**
- *  Center flex
-**/
+.list-style {
+    list-style: none;
+}
+
+
 

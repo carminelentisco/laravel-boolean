@@ -1,35 +1,27 @@
 .header-container {
-    padding: 10px 10px 0 10px;
-    background: $white;
-    @include logo_header;
-    @include justify(space-between);
-
-    .actions {
-        @include align(center);
-        a { text-transform: uppercase; }
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    padding: 0 15px 0 15px;
+    background: $bg_header;
+    @include flex($justify-direction:space-between, $align-direction:center);
+    
+    .header_nav-container {
+        @include flex($justify-direction:space-around, $align-direction:center);
+        .header_menu-list {
+            @include list-inline();
+            li {
+                padding: 15px;
+                margin-right: 20px;
+                text-align: center;
+               
+                &:hover { border-bottom: 2px solid $border_bottom; }
+                a { 
+                    font-size: 13px;
+                    text-transform: uppercase;
+                    @include link-formatter($text_dark_blue); 
+                }   
+            }    
+        }
     }
 }
-
-.header_menu-container {
-    @include flex (center, center);
-
-    .header_menu-list {
-        @include list-inline;
-
-        li {          
-            margin-right: 40px;
-            a {
-                color: $blue;
-                padding: 16px 16px 21px 16px;
-                font-size: 14px;
-                text-transform: uppercase;
-
-                &:hover,
-                &.active {
-                    border-bottom: 2px solid $green;
-                }
-            }
-        }
-    }   
-}
-

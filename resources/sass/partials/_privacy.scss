@@ -1,3 +1,27 @@
-.questions {
-    display: flex;
+.wrap_privacy {
+    flex-grow: 1;
+    margin-top: 100px;
+    padding: 50px;
+    color: $text_dark_blue;
+    background-color: $bg_privacy_page;
+
+    .privacy_container {
+        h1 { 
+            font-size: 32px; 
+            margin-bottom: 40px;
+        }
+
+        h2 { 
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        & p:last-of-type { margin: 0;}
+    }
 }
+

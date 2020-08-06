@@ -1,45 +1,71 @@
-.jumbotron {
-    margin: 6rem 0;
-    display: flex;
+.wrap_home { 
+    background-color: $bg_jumbotron_home; 
+    margin-top: 100px;
+    @include flex($justify-direction: center);
+}
 
-    .jumbotron-text {
-        @include justify(flex-start);
-        flex-direction: column;
-        flex-basis: 60%;
-        h1 {
-            font-size: 60px;
-            span:first-of-type { font-weight: 300; }
-            span:last-of-type {
-                display: block;
-                font-weight: bold;
+.jumbotron_home {
+    margin: 100px 0;
+    @include flex($align-direction:center);
+
+    .jumbotron_text {
+        width: 50%;
+        color: $text_dark_blue;
+        h1 { 
+            margin-bottom: 40px;
+            & span:first-of-type { font-size: 55px; }
+            & span:last-of-type { 
+                font-size: 55px; 
+                font-weight: 800;
             }
         }
 
         p {
-            font-size: 25px;
-            font-weight: bold;
+            font-weight : 800;
+            font-size: 23px;
+            margin-bottom: 20px;
         }
 
         ul {
-            padding-left: 15px;
-
+            padding: 0 15px 0;
             li {
                 font-size: 18px;
-                line-height: 1.5;   
-            }
-
-            span {
-                font-weight: 400;
+                span {
+                    font-weight: 800;
+                }
             }
         }
     }
 
-    .jumbotron-image {
-        
-        flex-basis: 40%;
-        @include flex (center, center);
-        img {
-            height: 200px;
+    .jumbotron_image { 
+        img { height: 250px } 
+    }
+}
+
+
+.home-route {
+
+    margin-top: 100px;
+    @include justify (space-around);
+    
+    a { 
+        flex-basis: 35%;
+        @include link-formatter(#fff); 
+
+
+    }
+    
+    .card {
+        padding: 40px;
+        background-color: #EB4550;
+        @include flex (start,column);
+
+        h2 {
+            font-weight: 600;
+            font-size: 35px;
+            margin-bottom: 15px;;
         }
+        
+        small { color: #000 }
     }
 }

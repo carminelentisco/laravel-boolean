@@ -36,7 +36,7 @@ $(document).ready(function() {
                         img : student.img,
                         nome: student.nome,
                         cognome: student.cognome,
-                        età: student.età,
+                        eta: student.eta,
                         genere: (student.genere == 'm') ? 'o' : 'a', 
                         azienda: student.azienda,
                         ruolo: student.ruolo,

@@ -1,6 +1,6 @@
 
-    <footer class="footer_section">
-        <div class="container">
+    <footer class="wrap_footer">
+        <div class="container footer_container ">
             <section class="footer_info">
                 {{-- Footer sx --}}
                 <div class="footer_info-brand">
@@ -15,10 +15,10 @@
                 </div>
     
                 <div class="footer_menu-list">
-                    <ul class="footer-action list-style">
+                    <ul class="footer-action">
                         <li><a href="#">Lezione gratuita</a></li>
-                        <li><a href="{{ Route('static-page.privacy') }}">Privacy</a></li>
-                        <li><a href="{{ Route('static-page.faq') }}">Faq</a></li>
+                        <li><a href="{{ Route('static-page.faq') }}">Domande frequenti</a></li>
+                        <li><a href="{{ Route('static-page.privacy') }}">Privacy policy</a></li>
                         <li><a href="#">Lavora con noi</a></li>
                     </ul>
                 </div>

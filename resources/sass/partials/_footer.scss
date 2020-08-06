@@ -1,43 +1,54 @@
-.footer_section {
-    padding: 5rem 0 4rem 0; 
-    color: $white;
-    background: $blue;
-    font-weight: 400;
+.wrap_footer {
+    padding: 60px 20px 20px 20px;
+    color: $text_footer;
+    background-color: $bg_footer;
 
     .footer_info {
         padding-bottom: 20px;
-        border-bottom: 1px solid $white;
-        @include justify(space-between);
-    }
+        margin-bottom: 20px;
+        @include flex($justify-direction:space-between);
+        border-bottom: 1px solid #fff;
 
-    .footer_info-brand {  
-        img { height: 60px; }  
-        h2 { margin-bottom: 10px; }
-        ul { @include list-column (start) }
-    }
-    
-    .footer_menu-list {
-        .footer-action {
-            font-size: 20px;
-            @include list-column (end);
-            li { margin-bottom: 8px; }
-        }
-    }
-    
-    a { color: $white; }
-
-    .footer_social {
-        ul {
-            margin: 20px 0;
-            @include list-inline;
-            @include justify (center); 
-            
-            li {  
-                margin: 0 20px;
-                i { font-size: 35px; }
+        .footer_info-brand {
+            img { height: 60px; }
+            ul { 
+                @include list-column (left);
+                
+                li { margin-bottom: 5px; }
             }
         }
-        
-        p { text-align: center; }  
+
+        .footer_menu-list {
+            ul { 
+                @include list-column (right);
+
+                li { 
+                    margin-bottom: 5px;
+                    
+                    a { 
+                        @include link-formatter(#fff);
+                        font-weight: bold;
+                        font-size: 20px;
+
+                        &:hover { text-decoration: underline;}
+                    }
+                }
+            }
+        }
+    }
+
+    .footer_social {
+        flex-direction: column;
+        @include flex($align-direction:center);
+        ul {
+            padding: 20px 0;
+            @include list-inline();
+           li { 
+               font-size: 35px;
+               margin-right: 35px;
+
+               i:hover { color: $bool_green}
+           }
+        }
     }
 }
