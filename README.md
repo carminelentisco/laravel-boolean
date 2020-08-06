@@ -14,4 +14,4 @@
     - Laravel 7.0
 
 ## Anteprima
-<img src="storage/app/public/img/laravel_bool.png" alt="Bool-copy"/>
+<img src="public/asset/laravel_bool.png" alt="Bool-copy"/>
